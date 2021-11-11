@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 @layer components {
+  body {
+    @apply font-body bg-black scrollbar-hide;
+  }
   .sidebarIcon {
     @apply h-6 text-[#808080] opacity-80 cursor-pointer transform 
     hover:opacity-100 hover:text-white hover:scale-125;
