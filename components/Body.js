@@ -2,10 +2,11 @@ import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import Poster from "./Poster";
 import Search from "./Search";
+import Track from "./Track";
 
 function Body({ chooseTrack, spotifyApi }) {
   const { data: session } = useSession();
-  const { accessToken } = session;
+  const accessToken = session?.accessToken;
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [newReleases, setNewReleases] = useState([]);
@@ -63,7 +64,7 @@ function Body({ chooseTrack, spotifyApi }) {
   return (
     <section className="bg-black ml-24 py-4 space-y-8 md:max-w-6xl flex-grow md:mr-2.5">
       <Search search={search} setSearch={setSearch} />
-      <div className="grid overflow-y-scroll scrollbar-hide h-96 py-4 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8 p-4">
+      <div className="grid overflow-y-scroll scrollbar-hide h-96 py-4 grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8 p-4">
         {searchResults.length === 0
           ? newReleases
               .slice(0, 4)
@@ -101,11 +102,35 @@ function Body({ chooseTrack, spotifyApi }) {
           </div>
           <button className="btn">All Genres</button>
         </div>
-        <div className="">
+        <div className="w-full pr-11">
           {/* Tracks */}
           <h2 className="text-white font-bold mb-3">
             {searchResults.length === 0 ? "New Releases" : "Tracks"}
           </h2>
+          <div
+            className="space-y-3 border-2 border-[#262626] rounded-2xl p-3 bg-[#0D0D0D] overflow-y-scroll h-[1000px]
+          md:h-96  scrollbar-thin scrollbar-thumb-gray-600 scrollbar-thumb-rounded hover:scrollbar-track-gray-500 w-[830px] "
+          >
+            {searchResults.length === 0
+              ? newReleases
+                  .slice(4, newReleases.length)
+                  .map((track) => (
+                    <Track
+                      key={track.id}
+                      track={track}
+                      chooseTrack={chooseTrack}
+                    />
+                  ))
+              : searchResults
+                  .slice(4, newReleases.length)
+                  .map((track) => (
+                    <Track
+                      key={track.id}
+                      track={track}
+                      chooseTrack={chooseTrack}
+                    />
+                  ))}
+          </div>
         </div>
       </div>
     </section>
