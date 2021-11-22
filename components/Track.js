@@ -1,9 +1,10 @@
-import { ImHeadphones } from "react-icons/im";
 import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
 import { AiFillHeart } from "react-icons/ai";
 import { useState } from "react";
-import { playingTrackState, playState } from "../atoms/playerAtom";
 import { useRecoilState } from "recoil";
+import { playingTrackState, playState } from "../atoms/playerAtom";
+import { ImHeadphones } from "react-icons/im";
+
 function Track({ track, chooseTrack }) {
   const [hasLiked, setHasLiked] = useState(false);
   const [play, setPlay] = useRecoilState(playState);
@@ -16,6 +17,7 @@ function Track({ track, chooseTrack }) {
       setPlay(!play);
     }
   };
+
   return (
     <div className="flex items-center justify-between space-x-20 cursor-default hover:bg-white/10 py-2 px-4 rounded-lg group transition ease-out">
       <div className="flex items-center">
