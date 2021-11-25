@@ -12,7 +12,7 @@ function Loader() {
           />
         </span>
         <div
-          class="
+          className="
       animate-spin
       rounded-full
       h-32
