@@ -1,3 +1,35 @@
+## Spotify 2.0
+
+This project was bootstrapped with [Nextjs](https://nextjs.org),[ react](https://github.com/facebook/create-react-app), using the [Atoms].
+
+## Quick Links
+
+[Live Demo](https://spotify-redesign2.vercel.app)
+
+[Demo](#Demo)
+
+[Tech Stack](#tech-stack)
+
+[Author](#author)
+
+---
+
+## Demo
+
+Photo Demo
+
+## Tech Stack
+
+- [NextJs](https://nextjs.org)
+  - Create-next-app with highly complex frontend structure
+- [Atoms]
+
+## Author
+
+- Rahul Raj N
+
+---
+
 # Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
@@ -25,5 +57,3 @@ npx create-next-app --example with-tailwindcss with-tailwindcss-app
 # or
 yarn create next-app --example with-tailwindcss with-tailwindcss-app
 ```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
