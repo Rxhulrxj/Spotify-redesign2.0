@@ -17,6 +17,8 @@ This project was bootstrapped with [Nextjs](https://nextjs.org),[ react](https:/
 ## Demo
 
 Photo Demo
+![Screenshot 2021-11-23 031332](https://user-images.githubusercontent.com/88202340/143901705-58d84186-f328-4b99-b9a7-7c257cb72203.png)
+
 
 ## Tech Stack
 
