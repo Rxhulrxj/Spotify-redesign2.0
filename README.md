@@ -22,7 +22,7 @@ Photo Demo
 
 - [NextJs](https://nextjs.org)
   - Create-next-app with highly complex frontend structure
-- [Atoms]
+- Atoms
 
 ## Author
 
