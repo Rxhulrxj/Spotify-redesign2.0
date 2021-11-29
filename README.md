@@ -1,6 +1,6 @@
 ## Spotify 2.0
 
-This project was bootstrapped with [Nextjs](https://nextjs.org),[ react](https://github.com/facebook/create-react-app), using the [Atoms].
+This project was bootstrapped with [Nextjs](https://nextjs.org),[ react](https://github.com/facebook/create-react-app), using Atoms.
 
 ## Quick Links
 
